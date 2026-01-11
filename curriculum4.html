@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Cargar AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+  <title>Conoce a los ponentes</title>
+</head>
+<body>
+  <div id="contenedor2">
+    <header>
+      <center>
+        <img class="logo" src="logos.png" alt="logo" data-aos="fade-down">
+      </center>
+    </header>
+    <nav id="navcur" data-aos="fade-up">
+      <ul>
+        <li><a href="index.html">Volver al inicio</a></li>
+		  <li><center><a href="programa.pdf">Descarga el programa de verano</a></center></li>
+        <li><a href="inscripcion.html">Inscribirse</a></li>
+        <li><a href="zoom.html">Liga de zoom</a></li>
+		  <li><center><a href="videos.html">Videos</a></center></li>
+      </ul>
+    </nav>
+
+    <section class="section2" data-aos="fade-up">
+      <br>
+      <div class="infoSuperior2" data-aos="fade-up">
+        <h1>CONOCE A LOS PONENTES</h1>
+
+        <!-- Bloques de imágenes (10 bloques) -->
+        
+      
+        <nav id="submenu">
+          <ul>
+            <li><a href="curriculum.html">1</a></li>
+            <li><a href="curriculum2.html">2</a></li>
+            <li><a href="curriculum3.html">3</a></li>
+            <li><a href="curriculum4.html">4</a></li>
+            <!--<li><a href="curriculum5.html">5</a></li>-->
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+
+  <!-- Cargar AOS JS al final del documento -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.querySelectorAll(".toggle").forEach(toggle => {
+      toggle.addEventListener("click", function () {
+        const targetId = this.dataset.target;
+        const imagen = document.getElementById(targetId);
+        const bloque = imagen.closest('.bloque');
+        const activa = imagen.classList.contains("activa");
+
+        imagen.classList.toggle("activa");
+        bloque.classList.toggle("activa");  // Añadimos clase al bloque para controlar su expansión
+
+        this.textContent = activa
+          ? this.textContent.replace("Ocultar", "Mostrar")
+          : this.textContent.replace("Mostrar", "Ocultar");
+      });
+    });
+
+    // Inicializar AOS después de cargar el script
+    document.addEventListener("DOMContentLoaded", function() {
+      AOS.init({
+        duration: 1000, // Duración de la animación en milisegundos
+        once: true      // Las animaciones se ejecutan solo una vez
+      });
+    });
+  </script>
+</body>
+</html>

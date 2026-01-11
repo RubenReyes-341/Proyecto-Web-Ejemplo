@@ -414,13 +414,17 @@ h1 {
 }
 
 h3 {
-  font-family: "Playfair", serif;
+  font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 600;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+
+  /* Mejora visual */
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5em;
+  color: #4a3f2d;
 }
+
 
 .justificados {
   text-align: justify;
